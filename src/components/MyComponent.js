@@ -3,11 +3,22 @@ import React, { Component } from "react";
 import { Button } from "primereact/button";
 
 class MyComponent extends Component {
-  render(props) {
+  state = {
+    count: 0,
+  };
+
+  handleClick = () => {
+    this.setState({
+      count: this.state.count + 1,
+    });
+  };
+
+  render() {
     return (
       <div>
-        <h1>{props.myOwnName}</h1>
-        <Button label={props.myButtonName} />
+        <Button label="Click Me" onClick={this.handleClick} />
+
+        <p>Count: {this.state.count}</p>
       </div>
     );
   }
