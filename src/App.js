@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 //theme
@@ -10,29 +9,58 @@ import "primereact/resources/primereact.min.css";
 //icons
 import "primeicons/primeicons.css";
 
-import { Button } from "primereact/button";
+import "/node_modules/primeflex/primeflex.css";
 
-import MyComponent from "./components/MyComponent";
+//navbar
+import Navigation from "./components/NavBar";
 
-import { useState } from "react";
+import Header from "./components/ExHeader";
+
+import ProdServices from "./components/ProdServices";
+
+import Plans from "./components/Plans";
+
+import Counter from "./components/Counter";
+
+import Operator from "./components/Operator";
+
+//routes
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+//submitform
+import SubmitForm from "./components/SubmitForm";
+import ExHeader from "./components/ExHeader";
+import MyDynamicRoutes from "./routes/MyDynamicRoutes";
+import MyRoutes from "./routes/MyRoutes";
+import MoreRouting from "./routes/MoreRouting";
 
 function App() {
-  var [count, setCount] = useState(0);
-
-  function handleClick() {
-    count = count + 1;
-    setCount(newCount);
-    console.log(`current number is ${newCount}`);
-  }
-
   return (
     <div className="App">
-      <header className="App-header">
-        <div>
-          <Button label="Click Me" onClick={handleClick} />
-          <p>Count: {count}</p>
-        </div>
-      </header>
+      {/* <Header></Header>
+      <br></br>
+      <br></br>
+      <ProdServices></ProdServices>
+      <br></br>
+      <br></br>
+      <Plans></Plans>
+      <br></br>
+      <br></br> */}
+
+      {/* <Navigation></Navigation>
+      <BrowserRouter>
+        <Routes>
+          <Route></Route>
+        </Routes>
+      </BrowserRouter>
+      <SubmitForm></SubmitForm> */}
+
+      {/* <Counter></Counter>
+      <br></br>
+      <br></br>
+      <Operator></Operator> */}
+      {/* <MyRoutes></MyRoutes> */}
+      <MoreRouting></MoreRouting>
     </div>
   );
 }
